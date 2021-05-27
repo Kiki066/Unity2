@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.AI;
 using UnityEngine.SceneManagement;
 
 public class Monstre : MonoBehaviour
@@ -8,6 +9,9 @@ public class Monstre : MonoBehaviour
 
     AudioSource m_Source;
 
+    private const float coefSpeed = 0.4f;
+
+    
 
     [SerializeField]
     private float damage = 50f;
@@ -15,12 +19,17 @@ public class Monstre : MonoBehaviour
     [SerializeField]
     private AudioClip roar;
 
+    [SerializeField]
+    private NavMeshAgent monster;
 
 
     static Animator anim;
 
     [SerializeField]
     public Player player;
+
+    int nbObjet;
+    float speed;
 
     public float Damage
     {
@@ -35,10 +44,13 @@ public class Monstre : MonoBehaviour
     }
 
     // Start is called before the first frame update
-    void Start()
+    public void Start()
     {
+        nbObjet = player.objet.Count;
         anim = GetComponent<Animator>();
         m_Source = GetComponent<AudioSource>();
+        monster = GetComponent<NavMeshAgent>();
+        
     }
 
 
@@ -67,8 +79,14 @@ public class Monstre : MonoBehaviour
 
     private void Update()
     {
+        Debug.Log(monster.speed);
+        if(player.objet.Count != nbObjet)
+        {
+            nbObjet = player.objet.Count;
+            speed = monster.speed + player.objet.Count * coefSpeed;
+            monster.speed = speed;
+        }
         
-       
     }
 
 

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
-   
+
 
     [SerializeField]
     private GameObject player;
@@ -14,6 +14,8 @@ public class Player : MonoBehaviour
 
     [SerializeField]
     private GameObject spawn;
+
+    public List<string> objet;
 
 
   
@@ -59,6 +61,7 @@ public class Player : MonoBehaviour
         if (other.gameObject.tag == "Collectable")
         {
                 other.gameObject.SetActive(false);
+                objet.Add(other.gameObject.name);
         }
     }
 
