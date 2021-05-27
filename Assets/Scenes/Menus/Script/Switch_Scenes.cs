@@ -8,7 +8,12 @@ public class Switch_Scenes : MonoBehaviour
     public void Play()
     {
 
-        SceneManager.LoadScene("JulesScene sans eau");
+        SceneManager.LoadScene("EndZone");
+    }
+
+    public void Pause()
+    {
+        SceneManager.LoadScene("EndZone");
     }
 
     public void Home()
