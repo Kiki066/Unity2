@@ -79,7 +79,6 @@ public class Monstre : MonoBehaviour
 
     private void Update()
     {
-        Debug.Log(monster.speed);
         if(player.objet.Count != nbObjet)
         {
             nbObjet = player.objet.Count;
