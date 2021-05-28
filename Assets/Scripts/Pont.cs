@@ -5,7 +5,7 @@ using UnityEngine;
 public class Pont : MonoBehaviour
 {
     [SerializeField]
-    private int nbItem;
+    private Player player;
 
     [SerializeField]
     private GameObject pontConstruit;
@@ -17,25 +17,26 @@ public class Pont : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-            Debug.Log("startos");
-        pontDetruit.SetActive(true);
-        pontMoitie.SetActive(false);
-        pontConstruit.SetActive(false);
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (nbItem >= 3)
+        if(player.objet.Count < 1)
         {
-            Debug.Log("troisos");
+            pontDetruit.SetActive(true);
+            pontMoitie.SetActive(false);
+            pontConstruit.SetActive(false);
+        }
+        else if (player.objet.Count < 2)
+        {
             pontDetruit.SetActive(false);
             pontMoitie.SetActive(true);
             pontConstruit.SetActive(false);
         }
-        else if (nbItem > 4)
+        else
         {
-            Debug.Log("cinquos");
             pontDetruit.SetActive(false);
             pontMoitie.SetActive(false);
             pontConstruit.SetActive(true);
