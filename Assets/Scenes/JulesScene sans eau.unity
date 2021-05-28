@@ -1766,7 +1766,7 @@ GameObject:
   - component: {fileID: 377091045}
   - component: {fileID: 377091044}
   - component: {fileID: 377091043}
-  - component: {fileID: 377091046}
+  - component: {fileID: 377091047}
   m_Layer: 0
   m_Name: Carte Principal
   m_TagString: Untagged
@@ -1975,7 +1975,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 36.33742, y: 100, z: 18.397552}
   m_Center: {x: 30.443064, y: 0, z: 103.20038}
---- !u!65 &377091046
+--- !u!65 &377091047
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1986,8 +1986,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 77.98898, y: 100, z: 24.05899}
-  m_Center: {x: 161.30241, y: 0, z: 115.88866}
+  m_Size: {x: 42.334015, y: 100, z: 24.689209}
+  m_Center: {x: 164.79323, y: 0, z: 119.28375}
 --- !u!1 &390041713
 GameObject:
   m_ObjectHideFlags: 0
@@ -6284,6 +6284,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Helicopter
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: ce8f0f92d8b5b4346bb543cd88aac046, type: 3}
+      propertyPath: m_TagString
+      value: Helico
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: ce8f0f92d8b5b4346bb543cd88aac046, type: 3}
       propertyPath: m_LocalPosition.x
       value: 208.14378
@@ -7279,7 +7283,7 @@ PrefabInstance:
     - target: {fileID: 57231930053843296, guid: 4dcc6804bdaffbf468b04ea9d8c390cf,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 76.74
+      value: 76.647
       objectReference: {fileID: 0}
     - target: {fileID: 57231930053843296, guid: 4dcc6804bdaffbf468b04ea9d8c390cf,
         type: 3}
@@ -8075,6 +8079,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d61b66c1a6f31a3448c7945603495569, type: 3}
+--- !u!1 &2023095314 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100000, guid: ce8f0f92d8b5b4346bb543cd88aac046,
+    type: 3}
+  m_PrefabInstance: {fileID: 1576395019}
+  m_PrefabAsset: {fileID: 0}
+--- !u!65 &2023095315
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023095314}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 9.2780075, y: 3.2576632, z: 10.579749}
+  m_Center: {x: -0.5535658, y: 1.6288316, z: -2.3051124}
 --- !u!1 &2030563231
 GameObject:
   m_ObjectHideFlags: 0
@@ -8365,7 +8388,7 @@ PrefabInstance:
     - target: {fileID: 6716261827926913438, guid: 87db59879a8bff24389ac3f0d0f9eb29,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 16.79
+      value: 19.79
       objectReference: {fileID: 0}
     - target: {fileID: 6716261827926913438, guid: 87db59879a8bff24389ac3f0d0f9eb29,
         type: 3}

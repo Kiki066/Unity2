@@ -9,7 +9,8 @@ public class Monstre : MonoBehaviour
 
     AudioSource m_Source;
 
-    private const float coefSpeed = 0.4f;
+    [SerializeField]
+    private const float coefSpeed = 0.3f;
 
     
 
