@@ -23,13 +23,13 @@ public class Pont : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(player.objet.Count < 1)
+        if(player.objet.Count < 3)
         {
             pontDetruit.SetActive(true);
             pontMoitie.SetActive(false);
             pontConstruit.SetActive(false);
         }
-        else if (player.objet.Count < 2)
+        else if (player.objet.Count < 5)
         {
             pontDetruit.SetActive(false);
             pontMoitie.SetActive(true);
