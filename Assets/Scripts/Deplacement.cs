@@ -209,11 +209,15 @@ public class Deplacement : MonoBehaviour
         }
 
         //PAUSE---------------------------------------
-       
-        if(MenuPause.jeuEnPause == false)
+
+        if (SceneManager.GetActiveScene().name == "JulesScene sans eau" && MenuPause.jeuEnPause == false)
         {
             Cursor.visible = false;
         }
+        else
+            Cursor.visible = true;
+
+
 
     }
 }
