@@ -1,10 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Player : MonoBehaviour
 {
-
+    AudioSource m_Source;
 
     [SerializeField]
     private GameObject player;
@@ -18,7 +19,14 @@ public class Player : MonoBehaviour
     public List<string> objet;
 
 
-  
+    [SerializeField]
+    public AudioClip hurt;
+
+    [SerializeField]
+    public AudioClip run;
+
+    [SerializeField]
+    public GameObject HurtPanel;
 
 
     //[SerializeField]
@@ -41,6 +49,7 @@ public class Player : MonoBehaviour
         player = GetComponent<GameObject>();
         //Vector3 spawnPos = spawn.transform.position;
         //player.transform.position = spawnPos;
+        m_Source = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -63,7 +72,36 @@ public class Player : MonoBehaviour
                 other.gameObject.SetActive(false);
                 objet.Add(other.gameObject.name);
         }
+
+        if(other.gameObject.tag == "Helico")
+        {
+            SceneManager.LoadScene("Victoire");
+        }
     }
+
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Monstre")
+        {
+            HurtPanel.SetActive(true);
+            m_Source.clip = hurt;
+            m_Source.Play();
+        }
+    }
+
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Monstre")
+        {
+            HurtPanel.SetActive(false);
+            m_Source.Stop();
+            m_Source.clip = run;
+            m_Source.Play();
+        }
+    }
+
+
 
 
 }

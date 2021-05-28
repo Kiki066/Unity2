@@ -19,6 +19,9 @@ public class Deplacement : MonoBehaviour
     [SerializeField]
     private float mouseSensitivityY = 3f;
 
+    [SerializeField]
+    private GameObject ObjectifPanel;
+
     //SONS--------------------------
     [SerializeField]
     private AudioClip walk;
@@ -41,6 +44,7 @@ public class Deplacement : MonoBehaviour
         motor = GetComponent<PlayerMotor>();
         anim = GetComponent<Animator>();
         m_Source = GetComponent<AudioSource>();
+        Cursor.visible = false;
     }
 
     private void Update()
@@ -85,6 +89,7 @@ public class Deplacement : MonoBehaviour
                 speed = speed + 1f;
             anim.SetBool("isRunning", true);
             m_Source.pitch = 1.5f;
+            ObjectifPanel.SetActive(false);
         }
         else
         {
@@ -205,6 +210,10 @@ public class Deplacement : MonoBehaviour
 
         //PAUSE---------------------------------------
        
+        if(MenuPause.jeuEnPause == false)
+        {
+            Cursor.visible = false;
+        }
 
     }
 }

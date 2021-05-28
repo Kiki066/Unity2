@@ -10,7 +10,7 @@ public class Monstre : MonoBehaviour
     AudioSource m_Source;
 
     [SerializeField]
-    private const float coefSpeed = 0.3f;
+    private float coefSpeed = 0.3f;
 
     
 
@@ -28,6 +28,13 @@ public class Monstre : MonoBehaviour
 
     [SerializeField]
     public Player player;
+
+
+
+
+
+
+
 
     int nbObjet;
     float speed;
@@ -74,9 +81,17 @@ public class Monstre : MonoBehaviour
             m_Source.Play();
 
         }
-       
-            
+        
     }
+
+ 
+
+
+
+
+
+
+
 
     private void Update()
     {
