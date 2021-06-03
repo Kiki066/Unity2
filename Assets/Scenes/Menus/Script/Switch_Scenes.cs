@@ -8,7 +8,10 @@ public class Switch_Scenes : MonoBehaviour
 {
     public Text text;
 
-
+    public void Start()
+    {
+        Cursor.visible = true;
+    }
 
     public void Pause()
     {

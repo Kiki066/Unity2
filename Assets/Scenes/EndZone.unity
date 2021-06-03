@@ -767,6 +767,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player: {fileID: 805956082}
   life: 100
+  spawn: {fileID: 0}
+  objet: []
+  hurt: {fileID: 0}
+  run: {fileID: 0}
+  HurtPanel: {fileID: 0}
 --- !u!1 &965106808 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 100000, guid: d61b66c1a6f31a3448c7945603495569,
@@ -999,7 +1004,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3de953dc63fb2224781028d08f231e12, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coefSpeed: 0.3
   damage: 50
+  roar: {fileID: 0}
+  monster: {fileID: 0}
   player: {fileID: 0}
 --- !u!136 &2011176593
 CapsuleCollider:
